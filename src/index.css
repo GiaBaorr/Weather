@@ -1,13 +1,97 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
+body {
+	font-family: "montserrat", sans-serif;
+	background-color: #af8cb1;
+}
+.app {
+	background-image: url("./assets/cold-bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: 0.4 ease-out;
+	max-width: 500px;
+	height: 80vh;
+	margin: 50px auto;
+	border-radius: 10px;
+}
+.app.warm {
+	background-image: url("./assets/warm-bg.jpg");
+}
+main {
+	height: 100%;
+	background-image: linear-gradient(
+		to bottom,
+		rgba(150, 150, 150, 0.2),
+		rgba(0, 0, 0, 0.75)
+	);
+	padding: 25px;
+}
+.search-box {
+	width: 100%;
+	margin: 0 0 75px;
+}
+.search-box .search-bar {
+	display: block;
+	margin: 0 auto;
+	width: 80%;
+	padding: 15px;
+	appearance: none;
+	background: none;
+	border: none;
+	border-radius: 0 0 15px 15px;
+	outline: none;
+	background-color: rgba(255, 255, 255, 0.45);
+	margin-top: -25px;
+	box-shadow: 0px 0px rgba(0, 0, 0, 0.2);
+	color: #313131;
+	font-size: 20px;
+	transition: 0.4s ease;
+}
+.search-box .search-bar:focus {
+	background: rgba(255, 255, 255, 0.75);
+}
+.location-box .location {
+	color: #fff;
+	font-size: 32px;
+	font-weight: 500;
+	text-align: center;
+	text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+.location-box .date {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 300;
+	font-style: italic;
+	text-align: center;
+	text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+}
+.weather-box {
+	text-align: center;
+}
+.weather-box .temp {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	margin: 30px auto;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 16px;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	padding: 15px;
+
+	color: #fff;
+	font-size: 102px;
+	font-weight: 900;
+	text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+	text-align: center;
+	box-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+}
+.weather-box .weather {
+	color: #fff;
+	font-size: 48px;
+	font-weight: 700;
+	text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
